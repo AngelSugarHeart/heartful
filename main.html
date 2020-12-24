@@ -430,7 +430,7 @@
 <% if(idol_detail.is_exist_archive) { %>
 <a class="js_btn_expansion"><img src='<%- idol_image %>' style="width:148px;height:185px;box-shadow: 2px 2px 2px #555555;" /></a>
 <% } else { %>
-<img src='http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fblank_l.jpg%3Fv%3D20101001000000' style="width:148px;height:185px;box-shadow: 2px 2px 2px #555555;" />
+<img src='illust/s00.jpg' style="width:148px;height:185px;box-shadow: 2px 2px 2px #555555;" />
 <% } %>
 </div>
 <div class="t-Rft" style="width:50%">
@@ -588,7 +588,7 @@ kg
 <% if (!val.voice_attention || !+val.voice_attention[key2]) { %>
 <a href='<%- val.voice_url[key2].replace('__hash_card_id__', idol_detail.data.hash_card_id) %>' class="jsOnDesignBtn">
 <div style="text-align:center; height:45px; margin:10px 0 5px;">
-<img src="http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_voicepage.jpg%3Fv%3D20101001000000" width="84"><br>
+<img src="image_sp/ui/episode/epi_button_voicepage.jpg" width="84"><br>
 </div>
 </a>
 <% } %>
@@ -607,7 +607,7 @@ kg
 <% if (+val.voice_enable[key2]) { %>
 <% if (!val.voice_attention || !+val.voice_attention[key2]) { %>
 <div style="text-align:center; height:45px; margin:10px 0 5px;">
-<img src="http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_voicepage_gray.jpg%3Fv%3D20101001000000" width="84"><br>
+<img src="image_sp/ui/episode/epi_button_voicepage_gray.jpg" width="84"><br>
 </div>
 <% } %>
 <% } %>
@@ -619,7 +619,7 @@ kg
 <% if (!ios_app_flg || !apple_review) { %>
 <% if (val.story_id > 0 && +val.voice_enable[last]) { %>
 <div class="checkForm ep_off" style="margin-top:0;margin-bottom:0">
-エピソードでボイスを再生させる
+에피소드에서 보이스를 재생시킴
 </div>
 <% } %>
 <% } %>
@@ -693,20 +693,20 @@ kg
 </section>
 <% if(trade_prohibition.is_trade_limit) { %>
 <div class="t-Cnt red <% if(is_exist_archive) { %>m-Btm8<% } %>">
-このアイドルはトレード、フリートレード、贈り物ができません。
+이 아이돌은 트레이드, 프리트레이드, 선물이 불가능합니다.
 </div>
 <% } %>
 <div class="area-btn-common _base-width">
 <% if(!trade_prohibition.is_trade_limit) { %>
-<a href='<%- url_trade.replace("__hash_card_id__", data.hash_card_id) %>' class="btn_normal_line_2 <% if(!is_exist_archive) { %>m-Cnt<% } %>" style="font-size:12px">フリートレード検索</a>
+<a href='<%- url_trade.replace("__hash_card_id__", data.hash_card_id) %>' class="btn_normal_line_2 <% if(!is_exist_archive) { %>m-Cnt<% } %>" style="font-size:12px">프리트레이드 검색</a>
 <% } %>
 <% if(is_exist_archive) { %>
-<a href='<%- url_album.replace("__hash_card_id__", data.hash_card_id) %>' class="btn_normal_line_2 <% if(trade_prohibition.is_trade_limit) { %>m-Cnt<% } %>">アルバム</a>
+<a href='<%- url_album.replace("__hash_card_id__", data.hash_card_id) %>' class="btn_normal_line_2 <% if(trade_prohibition.is_trade_limit) { %>m-Cnt<% } %>">앨범</a>
 <% } %>
 </div>
 <% if (event) { %>
 <h3 class="title_hanyo m-Top8 m-Btm8">
-<div>登場イベント</div>
+<div>등장 이벤트</div>
 </h3>
 <% Object.keys(event).forEach(function (key) { %>
 <div class="t-Cnt m-Btm5">
@@ -720,8 +720,8 @@ kg
 <% } %>
 </div>
 <div class="area-btn-common _base-width m-Btm8">
-<a href='<%- url_event_memory.replace("__event_id__", event[key].event_id).replace("__category_id__", event[key].category_id) %>' class="btn_normal_line_2 _line_2">イベントメモリー<br>を見る</a>
-<a href='<%- url_other_event.replace("__category_id__", event[key].category_id).replace("__event_id__", event[key].event_id) %>' class="btn_normal_line_2 _line_2">他のイベント登場<br>アイドルを検索する</a>
+<a href='<%- url_event_memory.replace("__event_id__", event[key].event_id).replace("__category_id__", event[key].category_id) %>' class="btn_normal_line_2 _line_2">이벤트 메모리<br>를 본다</a>
+<a href='<%- url_other_event.replace("__category_id__", event[key].category_id).replace("__event_id__", event[key].event_id) %>' class="btn_normal_line_2 _line_2">다른 이벤트 등장<br>아이돌을 검색한다</a>
 </div>
 <% }); %>
 <% } %>
@@ -841,7 +841,7 @@ kg
                 overflow: hidden;
                 position: absolute;
                 top: 0;
-                background: url('http://125.6.169.35/idolmaster/image_sp/ui/rich/effect/card_effect_01.png') center center;
+                background: url('image_sp/ui/rich/effect/card_effect_01.png') center center;
                 background-size: 608px 506px;
             }
         </style>
@@ -850,36 +850,36 @@ kg
                 var idol = {};
                 idol.detail_list = [{
                     "data": {
-                        "card_name": "\u4f50\u85e4\u5fc3",
+                        "card_name": "사토 신",
                         "rarity": "3",
                         "cost": "12",
                         "attribute": "passion",
-                        "skill_name": "\u7269\u7406\u7684\u306f\u3041\u3068\uff71\uff80\uff6f\uff78",
-                        "skill_effect": "\uff78\uff70\uff99\uff65\uff8a\uff9f\uff6f\uff7c\uff6e\uff9d\uff80\uff72\uff8c\uff9f\u306e\u653b \u4e2d\uff71\uff6f\uff8c\uff9f",
+                        "skill_name": "物理的はぁとｱﾀｯｸ",
+                        "skill_effect": "ｸｰﾙ･ﾊﾟｯｼｮﾝﾀｲﾌﾟの攻 中ｱｯﾌﾟ",
                         "grow_idol_flag": "",
                         "default_attack": "2040",
                         "default_defense": "1560",
                         "hash_card_id": "d9a0ec5b2f49514b8f6fdbc2b3771f44",
                         "alias_name": "",
-                        "real_name": "\u4f50\u85e4\u5fc3"
+                        "real_name": "사토 신"
                     },
                     "profile": {
                         "card_id": "3215601",
-                        "card_name": "\u4f50\u85e4\u5fc3",
-                        "card_kana": "\u3055\u3068\u3046\u3057\u3093",
+                        "card_name": "사토 신",
+                        "card_kana": "さとうしん",
                         "card_age": "26",
-                        "card_from": "\u9577\u91ce",
+                        "card_from": "나가노",
                         "card_height": "166",
-                        "card_weight": "\u30c0\u30a4\u30a8\u30c3\u30c8\u3061\u3085\u3046",
-                        "card_bust": "\u307c\u3093\u3063",
-                        "card_waist": "\u304d\u3085\u3063",
-                        "card_hip": "\u307c\u3093\u3063\u266a",
-                        "card_birthday": "7\u670822\u65e5",
-                        "card_constellation": "\u87f9\u5ea7",
+                        "card_weight": "다이어트중",
+                        "card_bust": "봉",
+                        "card_waist": "큣",
+                        "card_hip": "봉♪",
+                        "card_birthday": "7월 22일",
+                        "card_constellation": "게자리",
                         "card_blood": "AB",
-                        "card_arm": "\u53f3",
-                        "card_hobby": "\u30c9\u30ec\u30b9\u30a2\u30c3\u30d7\u30fb\u8863\u88c5\u4f5c\u308a",
-                        "card_cv": "\u82b1\u5b88\u3086\u307f\u308a"
+                        "card_arm": "오른손",
+                        "card_hobby": "드레스 업, 의상 제작",
+                        "card_cv": "하나모리 유미리"
                     },
                     "comments": {
                         "comment": "\u306f\u3041\uff5e\u3044\u266a\uff71\uff85\uff80\u306e\u306f\u3041\u3068\u3092\uff7c\uff6d\uff76\uff9e\uff7c\uff6d\uff76\uff9e\uff7d\uff73\uff68\uff70\uff84\u2606\u3055\u3068\u3046\u3057\u3093\u3053\u3068\u3057\u3085\u304c\uff70\u306f\u3041\u3068\u3060\u3088\u3049\u2606\u2026\u3042\u308c\u3047\uff64\u304a\u304b\u3057\u3044\u306a\u3041\uff70? \u53cd\u5fdc\u304c\u805e\u3053\u3048\u306a\u3044\u305e? \u3082\u3046\u4e00\u56de\uff64\uff71\uff85\uff80\u306e\u306f\u3041\u3068\u3092\uff7c\uff6d\uff76\uff9e\uff7c\u2026\u3048\u3063? \u3082\u3046\u3044\u3044? \u3048?",
